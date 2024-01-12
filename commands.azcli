@@ -1,0 +1,8 @@
+# Create the resource group
+az group create --name my-biep-rg --location eastus
+
+# Deploy the Bicep template to the resource group
+az deployment group create \
+    --resource-group my-biep-rg \
+    --name my-bicep-deployment \
+    --template-file main.json
